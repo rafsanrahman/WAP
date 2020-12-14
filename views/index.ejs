@@ -1,4 +1,60 @@
-<h1>Hi <%= name %></h1>
-<form action="/logout?_method=DELETE" method="POST">
-  <button type="submit">Log Out</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>Weather API</title>
+</head>
+
+<body>
+  <!-- top-banner section starts where we will put our city name and will get expected city's updated weather 
+    that manupulated by DOM and fetch our city's update by using API keys-->
+  <section class="top-banner">
+    <div class="container">
+      <div class="col-md-5 mx-auto text-center mt-0 p-0 rounded bg-custom">
+        <h1 class="heading">Weather API</h1>
+        <form>
+          <input type="text" placeholder="City Name" autofocus>
+          <button type="submit">Get weather</button>
+          <span class="msg"></span>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- top-banner section ends -->
+  
+  <!-- ajax-section starts that shows the expected city's weather update which is manupulated by JS DOM -->
+  <section class="ajax-section">
+    <div class="container">
+      <div class="col-md-5 mx-auto text-center mt-5 p-1 rounded bg-custom">
+        <ul class="cities"></ul>
+      </div>
+    </div>
+  </section>
+  <!-- ajax-section ends -->
+  
+  <!--Footer tag here  that shows only our team member names-->
+  <footer class="page-footer">
+    <div class="container">
+      <small>By <a href="#">Khalid, Rafsan</a>
+      </small>
+    </div>
+  </footer>
+<!-- Footer tag ends -->
+
+      <!--Linked with JavaScript source  -->
+    <script src="../public/app.js"></script>
+
+    <form action="/logout?_method=DELETE" method="POST">
+      <button type="submit">Log Out</button>
+    </form>
+
+</body>
+</html>
+
+
